@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradip Manikrao Pawale - Salesforce Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #FFFFFF;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #2E3B4E;
+            color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2E3B4E;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #CCCCCC;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #FF5733;
+            color: #FFFFFF;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+        }
+        h2 {
+            color: #FF5733;
+        }
+        ul li {
+            list-style: none;
+            background: #3E4C59;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        ul li:hover {
+            background: #FF5733;
+        }
+        a {
+            color: #FF5733;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #FF6F61;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pradip Manikrao Pawale</h1>
+        <p>Salesforce Developer</p>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Pradip Manikrao Pawale, a passionate Salesforce Developer with a keen interest in reading books and exploring new technologies. I have a strong foundation in Salesforce development, and I enjoy solving complex problems and creating efficient solutions. I have also cleared the Platform Developer certification of Salesforce.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Apex</li>
+            <li>Lightning Web Components (LWC)</li>
+            <li>Flows</li>
+            <li>Validating development</li>
+            <li>SOQL</li>
+        </ul>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>I have 1 year of experience in Salesforce development, where I have worked on various projects and gained valuable insights into the Salesforce ecosystem.</p>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <p>Bachelor of Engineering</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Phone: 8805739771</p>
+        <p>Email: <a href="mailto:pawlepradip29@gmail.com">pawlepradip29@gmail.com</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Pradip Manikrao Pawale</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
